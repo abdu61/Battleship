@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battleship</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+  </head>
+  <body class="container">
+    <header>
+      <h1>Battleship</h1>
+    </header>
+    <main>
+      <div id="status-message">
+        Click your board cells to place ships, then press Start Game.
+      </div>
+      <div class="boards-container">
+        <div class="board-sub-container">
+          <h2>Your Board</h2>
+          <div class="board" id="player-board"></div>
+        </div>
+        <div class="board-sub-container">
+          <h2>Enemy Board</h2>
+          <div class="board" id="computer-board"></div>
+        </div>
+      </div>
+      <div class="controls">
+        <label for="ship-orientation">Ship Orientation:</label>
+        <select id="ship-orientation">
+          <option value="horizontal" selected>Horizontal</option>
+          <option value="vertical">Vertical</option>
+        </select>
+        <button id="new-game">Restart</button>
+        <button id="start-game">Start Game</button>
+      </div>
+      <div id="match-summary"></div>
+    </main>
+    <footer><p>Created with Love - Abdu</p></footer>
+  </body>
+</html>

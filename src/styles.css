@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #242424;
+  color: #ffffff;
+  min-height: 100dvh;
+}
+
+header {
+    text-align: center;
+    width: 100%;
+    background-color:#000000;
+    padding: 20px 0px;
+}
+
+h1 {
+  font-family: 'Pixelify Sans', sans-serif;
+  font-size: 44px;
+  color: #f7d61a;
+}
+
+#status-message{
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    padding: 40px 0px;
+}
+
+.boards-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+
+.boards-container > h2 {
+  font-size: 16px;
+}
+
+.board-sub-container{
+    color: #cfcfcf;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(10, 36px);
+  grid-template-rows: repeat(10, 36px);
+  gap: 2px;
+  background-color: #242424;;
+  border: none;
+  margin: 0 20px;
+}
+
+.board div {
+  width: 36px;
+  height: 36px;
+  background-color: hsl(0, 0%, 39%);
+  cursor: pointer;
+}
+
+.board div.ship-cell {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/1165/1165544.png'); /* Example icon */
+  background-color: #f7d61a;  
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px 24px;
+}
+
+.board div.hit-cell {
+  background-color: rgb(247, 247, 247);
+  animation: hit-flash 0.3s forwards;
+}
+
+.board div.ship-hit {
+  background-color: red;
+  background-image: none;
+}
+
+.board div.miss {
+  background-color: #88c;
+}
+
+@keyframes hit-flash {
+  from { box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); }
+  to { box-shadow: none; }
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.controls button {
+    padding: 12px 24px;
+    color: #242424;
+    border: none;
+    border-radius: 8px;
+}
+
+#ship-orientation {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+}
+
+#match-summary {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+footer{
+    background: #000000;
+    padding: 20px;
+}
+
+footer p{
+    font-family: 'Pixelify Sans', sans-serif;
+    color: #f7d61a;
+    text-align: center;
+}
